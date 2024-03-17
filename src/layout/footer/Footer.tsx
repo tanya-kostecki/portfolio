@@ -1,67 +1,27 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { FC } from 'react'
+import * as S from './Footer.styled'
 import { Logo } from '../../components/logo/Logo'
-import { FlexedWrapper } from '../../components/FlexWrapper'
 import { Container } from '../../components/Container'
 import { Socials } from '../../components/socials/Socials'
-import { theme } from '../../styles/Theme'
-import { font } from '../../styles/Common'
 
-export const Footer = () => {
+
+export const Footer: FC = () => {
   return (
-    <StyledFooter>
+    <S.Footer>
       <Container>
-        <FooterWrapper justify='space-between'>
+        <S.FooterWrapper justify='space-between'>
           <Logo/>
-          <ContactDetails>
-            <ContactText>Call me:</ContactText>
-            <ContactText as='a' href='tel:+123-456-789'>+123-456-789</ContactText>
-          </ContactDetails>
-          <ContactDetails>
-            <ContactText>Email:</ContactText>
-            <ContactText as='a' href='mailto:example@mail.com'>example@mail.com</ContactText>
-          </ContactDetails>
+          <S.ContactDetails>
+            <S.ContactText>Call me:</S.ContactText>
+            <S.ContactText as='a' href='tel:+123-456-789'>+123-456-789</S.ContactText>
+          </S.ContactDetails>
+          <S.ContactDetails>
+            <S.ContactText>Email:</S.ContactText>
+            <S.ContactText as='a' href='mailto:example@mail.com'>example@mail.com</S.ContactText>
+          </S.ContactDetails>
           <Socials/>
-        </FooterWrapper>
+        </S.FooterWrapper>
       </Container>      
-    </StyledFooter>
+    </S.Footer>
   )
 }
-
-const StyledFooter = styled.footer`
-  padding-bottom: 50px;
-
-  @media ${theme.media.tablet} {
-    display: none;
-  }
-`
-const ContactDetails = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-export const ContactText = styled.span`
-  display: block;
-  ${font({ family: 'Montserrat, sans-serif', weight: 600, color: theme.colors.darkFont, Fmax: 22, Fmin: 12 })};
-  text-align: left;
-`
-
-export const FooterWrapper = styled(FlexedWrapper)`
-  padding-top: 20px;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    top: -30%;
-    width: 100%;
-    height: 1px;
-    background-color: ${theme.colors.darkFont};
-  }
-
-  @media ${theme.media.tablet} {
-    &::before {
-      top: 0;
-    }
-  }
-`

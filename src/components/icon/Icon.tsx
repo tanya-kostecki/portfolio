@@ -1,5 +1,4 @@
 import React from 'react'
-// import iconsSprite from '../../assets/images/icons-sprite.svg'
 import iconsSprite from '../../assets/images/sprite.svg'
 
 type IconPropsType = {
@@ -7,7 +6,6 @@ type IconPropsType = {
     width?: string;
     height?: string;
     viewBox?: string;
-    //
     stroke?: string;
     fill?: string;
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { FC } from 'react'
+import * as S from './Skill.styled'
 import { Icon } from '../../../../components/icon/Icon'
 
 type MobileSkillItemPropsType = {
@@ -7,24 +7,11 @@ type MobileSkillItemPropsType = {
     name?: string;
     fill?: string;
 }
-export const MobileSkill = (props: MobileSkillItemPropsType) => {
+export const MobileSkill: FC<MobileSkillItemPropsType> = (props) => {
   return (
-    <MobileStyledSkillItem>
+    <S.MobileStyledSkillItem>
         <Icon iconId={props.iconId} fill={props.fill} width='75px' height='75px'/>
-        <MobileSkillName>{props.name}</MobileSkillName>
-    </MobileStyledSkillItem>
+        <S.MobileSkillName>{props.name}</S.MobileSkillName>
+    </S.MobileStyledSkillItem>
   )
 }
-
-const MobileStyledSkillItem = styled.div`
-   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    gap: 10px;
-`
-
-const MobileSkillName = styled.span`
-  text-align: center;
-`

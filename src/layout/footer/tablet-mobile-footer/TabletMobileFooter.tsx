@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import { Container } from '../../../components/Container'
 import { FlexedWrapper } from '../../../components/FlexWrapper'
-import { FooterWrapper } from '../Footer'
+import { FooterWrapper } from '../Footer.styled'
 import { Socials } from '../../../components/socials/Socials'
-import { ContactText } from '../Footer'
+import { ContactText } from '../Footer.styled'
 
-export const TabletMobileFooter = () => {
+export const TabletMobileFooter: FC = () => {
   return (
     <StyledFooter>
         <Container>

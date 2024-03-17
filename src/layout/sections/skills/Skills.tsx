@@ -1,48 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { FC } from 'react'
+import * as S from './Skills.styled'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Skill } from './skill/Skill'
 import { skills } from '../../../constants/skills'
 import { Container } from '../../../components/Container'
 import { MobileSkill } from './skill/MobileSkill'
 
-export const Skills = () => {
+export const Skills: FC = () => {
   return (
-    <StyledSkills>
+    <S.Skills>
       <Container>
         <SectionTitle>My Tech Stack</SectionTitle>
-        <SkillsContainer >
+        <S.SkillsContainer >
           {skills.map((skill, index) => <Skill key={index} iconId={skill.iconId} fill={skill.fill} name={skill.name}/>)}
-        </SkillsContainer>
+        </S.SkillsContainer>
 
-        <MobileSkillsContainer>
+        <S.MobileSkillsContainer>
           {skills.map((skill, index) => <MobileSkill key={index} iconId={skill.iconId} fill={skill.fill} name={skill.name}/>)}
-        </MobileSkillsContainer>
+        </S.MobileSkillsContainer>
       </Container>
-        
-    </StyledSkills>
+  
+    </S.Skills>
   )
 }
-
-const StyledSkills = styled.section`
-`
-
-const SkillsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(13rem, auto));
-
-  @media screen and (max-width: 655px) {
-    display: none;
-  }
-`
-
-const MobileSkillsContainer = styled.div`
-  display: none;
-
-  @media screen and (max-width: 655px) {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(7rem, auto));
-    align-items: center;
-    justify-items: center;
-  }
-`
