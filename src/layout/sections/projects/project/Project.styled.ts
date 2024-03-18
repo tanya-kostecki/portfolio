@@ -8,11 +8,11 @@ export const ProjectItem = styled.div`
     margin: 10px;
     max-width: 540px;
     width: 330px;
-    transition: .4s ease;
+    /* transition: .4s ease; */
     flex-grow: 1;
 
     &:hover {
-        transform: scale(1.05);
+        /* transform: scale(1.05); */
         filter: drop-shadow(0px 0px 5px ${theme.colors.darkGradientFirst}) drop-shadow(0px 0px 5px ${theme.colors.darkGradientSecond});
     }
 `

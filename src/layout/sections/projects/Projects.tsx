@@ -40,7 +40,7 @@ export const Projects: FC = () => {
     <S.Projects>
       <Container>
         <SectionTitle>Projects</SectionTitle>
-        <ProjectsTabs changeFilterStatus={changeFilterStatus}/>
+        <ProjectsTabs changeFilterStatus={changeFilterStatus} currentFilterStatus={currentFilterStatus}/>
         {screen.width > 768 ? (
           <FlexedWrapper wrap="wrap" justify="center">
             {filteredProjects.map((project, index) => (
