@@ -1,4 +1,5 @@
 import './App.css';
+import { Particle } from './components/particle/Particle';
 import { useGetWindowWidth } from './hooks/useWindowWidth';
 import { Footer } from './layout/footer/Footer';
 import { TabletMobileFooter } from './layout/footer/tablet-mobile-footer/TabletMobileFooter';
@@ -14,6 +15,7 @@ function App() {
     const screen = useGetWindowWidth()
     return (
         <div className="App">
+            <Particle/>
             <Header/>
             <Main/>
             <About/>

@@ -3,6 +3,7 @@ import { theme } from "../../../styles/Theme";
 
 export const About = styled.section`
   display: flex;
+  position: relative;
 `
 
 export const Paragraph = styled.p`

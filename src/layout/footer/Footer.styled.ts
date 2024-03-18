@@ -5,6 +5,8 @@ import { FlexedWrapper } from "../../components/FlexWrapper";
 
 export const Footer = styled.footer`
   padding-bottom: 50px;
+  background-color: ${theme.colors.darkBg};
+  position: relative;
 
   @media ${theme.media.tablet} {
     display: none;

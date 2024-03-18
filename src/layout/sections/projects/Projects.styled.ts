@@ -4,6 +4,8 @@ import { theme } from "../../../styles/Theme";
 import { FlexedWrapper } from "../../../components/FlexWrapper";
 
 export const Projects = styled.section`
+  position: relative;
+  background-color: ${theme.colors.darkBg};
 `
 export const ProjectsButton = styled(StyledButton)`
   display: none;

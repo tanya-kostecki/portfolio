@@ -7,20 +7,30 @@ export const Main = styled.section`
     display: flex;
 `
 
-export const GreeitngsBlock = styled.div`
-    background-image: ${theme.colors.darkAccent};
-    background-clip: text;
-    -webkit-background-clip: text;
-`
+export const GreetingsBlock = styled.div`
+  background-image: ${theme.colors.darkAccent};
+  background-clip: text;
+  -webkit-background-clip: text;
+`;
 export const Greetings = styled.span`
-    display: block;
-    ${font({ family: 'Montserrat, sans-serif', weight: 700, color: theme.colors.darkFont, Fmax: 36, Fmin: 18 })}
-    margin: 10px 0;
+  display: block;
+  ${font({
+    family: "Montserrat, sans-serif",
+    weight: 700,
+    color: theme.colors.darkFont,
+    Fmax: 36,
+    Fmin: 18,
+  })}
+  margin: 10px 0;
 
-    @media ${theme.media.mobile} {
-        margin: 10px 0 15px;
-    }
-`
+  p {
+    display: none;
+  }
+
+  @media ${theme.media.mobile} {
+    margin: 10px 0 15px;
+  }
+`;
 export const Name = styled(Greetings)`
     ${font({ family: 'Montserrat, sans-serif', weight: 700, color: 'transparent', Fmax: 58, Fmin: 32 })}; //36
     white-space: nowrap;

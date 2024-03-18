@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { theme } from "../../../styles/Theme";
 
-export const Contacts = styled.section``
+export const Contacts = styled.section`
+    position: relative;
+    background-color: ${theme.colors.darkBg};
+`
    
 export const StyledForm = styled.form`
     max-width: 540px;

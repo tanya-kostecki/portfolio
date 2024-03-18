@@ -1,7 +1,10 @@
 import styled from "styled-components";
+import { theme } from "../../../styles/Theme";
 
 export const Skills = styled.section`
-`
+  position: relative;
+  background-color: ${theme.colors.darkBg};
+`;
 
 export const SkillsContainer = styled.div`
   display: grid;

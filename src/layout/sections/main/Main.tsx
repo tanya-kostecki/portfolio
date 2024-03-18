@@ -4,6 +4,8 @@ import { FlexedWrapper } from '../../../components/FlexWrapper'
 import photo from '../../../assets/images/photo.webp'
 import { StyledButton } from "../../../components/Button";
 import { Container } from '../../../components/Container'
+import Typewriter from "typewriter-effect";
+import Tilt from "react-parallax-tilt";
 
 export const Main: FC = () => {
   return (
@@ -14,16 +16,34 @@ export const Main: FC = () => {
           justify="space-around"
           wrap="wrap-reverse"
         >
-          <S.GreeitngsBlock>
+          <S.GreetingsBlock>
             <S.Greetings>Hi &#128075;</S.Greetings>
             <S.Greetings>My Name is</S.Greetings>
             <S.Name as="h2">TATIANA KOSTECKI</S.Name>
-            <S.Greetings as="h1">I am a Web Developer</S.Greetings>
+            <S.Greetings as="h1">
+              <p>I am a Web Developer</p>
+              <Typewriter
+                options={{
+                  strings: ["I am a Web Developer"],
+                  autoStart: true,
+                  loop: true,
+                  delay: 50,
+                }}
+              />
+            </S.Greetings>
             <StyledButton>Contact me</StyledButton>
-          </S.GreeitngsBlock>
-          <S.PhotoWrapper>
-            <S.Photo src={photo} alt="image" />
-          </S.PhotoWrapper>
+          </S.GreetingsBlock>
+          <Tilt
+            glareEnable={true}
+            glareMaxOpacity={0.9}
+            glareColor="lightblue"
+            glarePosition="all"
+            glareBorderRadius="20px"
+          >
+            <S.PhotoWrapper>
+              <S.Photo src={photo} alt="image" />
+            </S.PhotoWrapper>
+          </Tilt>
         </FlexedWrapper>
       </Container>
     </S.Main>
