@@ -7,6 +7,7 @@ type ProjectPropsType = {
     image: string;
     title: string;
     description: string;
+    type?: string;
 }
 export const Project: FC<ProjectPropsType> = (props) => {
   return (
