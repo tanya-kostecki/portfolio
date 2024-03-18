@@ -8,7 +8,7 @@ import { MobileSkill } from './skill/MobileSkill'
 
 export const Skills: FC = () => {
   return (
-    <S.Skills>
+    <S.Skills id='tech'>
       <Container>
         <SectionTitle>My Tech Stack</SectionTitle>
         <S.SkillsContainer >

@@ -4,7 +4,6 @@ import { Logo } from '../../components/logo/Logo'
 import { Menu } from "./menu/Menu";
 import { FlexedWrapper } from '../../components/FlexWrapper'
 import { Socials } from '../../components/socials/Socials'
-import { items } from '../../constants/menu-items'
 import { Container } from '../../components/Container'
 import { MobileMenu } from './mobile-menu/MobileMenu'
 
@@ -16,10 +15,10 @@ export const Header: FC = () => {
         <FlexedWrapper justify="space-between" align="center">
           <Logo />
           <S.LinksWrapper gap="20px" justify="space-between" align="center">
-            <Menu menuItems={items} />
+            <Menu />
             <Socials />
           </S.LinksWrapper>
-          <MobileMenu menuItems={items} />
+          <MobileMenu/>
         </FlexedWrapper>
       </Container>
     </S.Header>

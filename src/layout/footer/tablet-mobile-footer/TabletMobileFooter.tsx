@@ -25,5 +25,6 @@ export const TabletMobileFooter: FC = () => {
 
 const StyledFooter = styled.footer`
     padding-bottom: 20px;
+    position: relative;
     background-color: ${theme.colors.darkBg};
 `

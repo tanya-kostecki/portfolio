@@ -52,8 +52,10 @@ const ProjectLink = styled.a<{ active: boolean }>`
   text-align: left;
   text-transform: uppercase;
 
-  ${props => props.active && css<{ active: boolean }>`
-    color: yellow;
-    font-size: 18px;;
-  `}
+  ${(props) =>
+    props.active &&
+    css<{ active: boolean }>`
+      color: yellow;
+      font-size: 18px;
+    `}
 `;

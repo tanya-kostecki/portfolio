@@ -1,12 +1,11 @@
 import React, { FC } from 'react'
 import * as S from './Menu.styled'
+import { MenuItems } from '../menu-items/MenuItems'
 
-export const Menu: FC<{ menuItems: {title: string, href: string}[] }> = (props) => {
+export const Menu: FC = () => {
   return (
     <S.Menu>
-        <ul>
-            {props.menuItems.map((item, index) => <li key={index}><a href={item.href}>{item.title}</a></li>)}
-        </ul>
+        <MenuItems/>
     </S.Menu>
   )
 }

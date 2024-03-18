@@ -1,22 +1,22 @@
-export const items = [ 
-    {
-      title: 'Home',
-      href: '#1'
-    },
-    {
-      title: 'About',
-      href: '#2'
-    },
-    {
-      title: 'Tech',
-      href: '#3'
-    },
-    {
-      title: 'Projects',
-      href: '#4'
-    },
-    {
-      title: 'Contact',
-      href: '#5'
-    },
-  ]
+export const items = [
+  {
+    title: "Home",
+    href: "home",
+  },
+  {
+    title: "About",
+    href: "about",
+  },
+  {
+    title: "Projects",
+    href: "projects",
+  },
+  {
+    title: "Tech",
+    href: "tech",
+  },
+  {
+    title: "Contact",
+    href: "contact",
+  },
+];

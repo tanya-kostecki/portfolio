@@ -1,7 +1,8 @@
 import React, { FC, useState } from 'react'
 import * as S from './MobileMenu.styled'
+import { MenuItems } from '../menu-items/MenuItems'
 
-export const MobileMenu: FC<{ menuItems: {title: string, href: string}[] }> = (props) => {
+export const MobileMenu: FC = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
   
   const onBurgerBtnClick = () => {
@@ -14,9 +15,7 @@ export const MobileMenu: FC<{ menuItems: {title: string, href: string}[] }> = (p
             <span></span>
         </S.BurgerButton>
         <S.MobileMenuPopup isOpen={menuIsOpen} onClick={() => setMenuIsOpen(false)}>
-            <ul>
-                {props.menuItems.map((item, index) => <li key={index}><a href={item.href}>{item.title}</a></li>)}
-            </ul>
+           <MenuItems/>
         </S.MobileMenuPopup>
     </S.MobileMenu>
   )

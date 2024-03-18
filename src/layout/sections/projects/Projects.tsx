@@ -37,10 +37,13 @@ export const Projects: FC = () => {
     setShowMore(!showMore);
   };
   return (
-    <S.Projects>
+    <S.Projects id="projects">
       <Container>
         <SectionTitle>Projects</SectionTitle>
-        <ProjectsTabs changeFilterStatus={changeFilterStatus} currentFilterStatus={currentFilterStatus}/>
+        <ProjectsTabs
+          changeFilterStatus={changeFilterStatus}
+          currentFilterStatus={currentFilterStatus}
+        />
         {screen.width > 768 ? (
           <FlexedWrapper wrap="wrap" justify="center">
             {filteredProjects.map((project, index) => (
@@ -71,20 +74,20 @@ export const Projects: FC = () => {
         ) : (
           <>
             <S.TabletWrapper wrap="wrap" justify="center">
-            {filteredProjects.map((project, index) => (
-              <Project
-                key={index}
-                title={project.title}
-                description={project.description}
-                image={project.image}
-              />
-            ))}
+              {filteredProjects.map((project, index) => (
+                <Project
+                  key={index}
+                  title={project.title}
+                  description={project.description}
+                  image={project.image}
+                />
+              ))}
             </S.TabletWrapper>
-            {currentFilterStatus === 'all' ? (
+            {currentFilterStatus === "all" ? (
               <S.ProjectsButton onClick={toggleMoreOnClick}>
                 SEE LESS
               </S.ProjectsButton>
-            ): null}
+            ) : null}
           </>
         )}
       </Container>

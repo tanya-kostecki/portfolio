@@ -9,7 +9,7 @@ import Tilt from "react-parallax-tilt";
 
 export const Main: FC = () => {
   return (
-    <S.Main>
+    <S.Main id='home'>
       <Container>
         <FlexedWrapper
           align="center"
@@ -24,7 +24,7 @@ export const Main: FC = () => {
               <p>I am a Web Developer</p>
               <Typewriter
                 options={{
-                  strings: ["I am a Web Developer"],
+                  strings: ["I am a Web Developer", "I am a Frontend Developer"],
                   autoStart: true,
                   loop: true,
                   delay: 50,
