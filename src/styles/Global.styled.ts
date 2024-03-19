@@ -30,7 +30,8 @@ export const GlobalStyle = createGlobalStyle`
 
     a:hover {
         transform: scale(1.4);
-        color: yellow;
+        /* color: yellow; */
+        
     }
 
     ul {

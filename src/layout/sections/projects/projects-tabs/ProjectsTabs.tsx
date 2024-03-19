@@ -36,7 +36,7 @@ const ProjectsTabsList = styled.ul`
 
   li:hover {
     transform: scale(1.2);
-    color: yellow;
+    /* color: yellow; */
   }
 
   @media ${theme.media.mobile} {
@@ -52,10 +52,20 @@ const ProjectLink = styled.a<{ active: boolean }>`
   text-align: left;
   text-transform: uppercase;
 
+  &:hover {
+    background-image: ${theme.colors.darkAccent};
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
   ${(props) =>
     props.active &&
     css<{ active: boolean }>`
-      color: yellow;
       font-size: 18px;
+      background-image: ${theme.colors.darkAccent};
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     `}
 `;

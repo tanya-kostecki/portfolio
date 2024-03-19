@@ -3,6 +3,7 @@ import { items } from "../../../constants/menu-items";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 import { font } from "../../../styles/Common";
+import { theme } from "../../../styles/Theme";
 
 export const MenuItems: FC = () => {
   return (
@@ -33,13 +34,11 @@ const NavLink = styled(Link)`
   ${font({ family: "Montserrat", weight: 500, Fmin: 16, Fmax: 16 })};
   display: inline-block;
 
-  &.active {
+  &.active, &:hover {
     transform: scale(1.4);
-    color: yellow;
-  }
-
-  &:hover {
-    transform: scale(1.4);
-    color: yellow;
+    background-image: ${theme.colors.darkAccent};
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 `;

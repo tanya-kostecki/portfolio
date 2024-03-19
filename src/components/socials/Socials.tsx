@@ -16,5 +16,10 @@ export const Socials: FC = () => {
 const StyledSocials = styled.div`
   display: flex;
   gap: 20px;
+
+  a:hover {
+    transform: scale(1.4);
+    color: ${theme.colors.darkGradientFirst};
+  }
 `
 
