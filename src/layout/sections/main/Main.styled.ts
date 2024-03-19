@@ -32,7 +32,7 @@ export const Greetings = styled.span`
   }
 `;
 export const Name = styled(Greetings)`
-    ${font({ family: 'Montserrat, sans-serif', weight: 700, color: 'transparent', Fmax: 58, Fmin: 32 })}; //36
+    ${font({ family: 'Montserrat, sans-serif', weight: 700, color: 'transparent', Fmax: 58, Fmin: 32 })};
     white-space: nowrap;
 `
 

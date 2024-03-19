@@ -18,7 +18,7 @@ export const SkillName = styled.span`
 `
 
 export const MobileStyledSkillItem = styled.div`
-   display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
