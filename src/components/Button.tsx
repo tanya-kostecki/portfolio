@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { theme } from '../styles/Theme'
 
 export const StyledButton = styled.button`
   border-radius: 6px;
@@ -6,4 +7,9 @@ export const StyledButton = styled.button`
   padding: 12px 20px 13px 20px;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: ${theme.animations.transition};
+  }
 `

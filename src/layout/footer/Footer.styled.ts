@@ -15,18 +15,18 @@ export const Footer = styled.footer`
 export const ContactDetails = styled.div`
   display: flex;
   flex-direction: column;
-`
-export const ContactText = styled.span`
-  display: block;
-  ${font({ family: 'Montserrat, sans-serif', weight: 600, color: theme.colors.darkFont, Fmax: 22, Fmin: 12 })};
-  text-align: left;
 
-  &:hover {
+  a:hover {
     background-image: ${theme.colors.darkAccent};
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
   }
+`
+export const ContactText = styled.span`
+  display: block;
+  ${font({ family: 'Montserrat, sans-serif', weight: 600, color: theme.colors.darkFont, Fmax: 22, Fmin: 12 })};
+  text-align: left;
 `
 
 export const FooterWrapper = styled(FlexedWrapper)`

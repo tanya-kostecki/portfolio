@@ -8,12 +8,15 @@ type ProjectPropsType = {
     title: string;
     description: string;
     type?: string;
+    href?: string;
 }
 export const Project: FC<ProjectPropsType> = (props) => {
   return (
     <S.ProjectItem >
-        <S.Image src={props.image}/>
-
+        <S.ImageBlock>
+            <S.Image src={props.image}/>
+            <S.ProjectLink as='a' href={props.href}>View Project</S.ProjectLink>
+        </S.ImageBlock>
         <S.ProjectContent>
             <S.Title>{props.title}</S.Title>
             <S.Description>{props.description}</S.Description>

@@ -8,35 +8,41 @@ export const MobileMenu = styled.nav`
         display: block;
     }
 `
-export const MobileMenuPopup = styled.div<{isOpen: boolean}>`
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    background-color: rgba(4, 31, 49, 0.829);
+export const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(4, 31, 49, 0.829);
+  /* display: none; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: 0.8s ease-in-out;
 
-    display: none;
-    ${props => props.isOpen && css<{isOpen: boolean}>`
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 16px;
+    display: inline-block;
+  }
+
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      transform: translateX(0);
+
     `}
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    a {
-        font-weight: 500;
-        font-size: 16px;
-        display: inline-block;
-    }
-`
+`;
 export const BurgerButton =styled.button<{isOpen: boolean}>`
     position: fixed;
     top: -90px;

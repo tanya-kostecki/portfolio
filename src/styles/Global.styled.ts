@@ -25,13 +25,11 @@ export const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         color: ${theme.colors.darkFont};
-        transition: .2s ease-in-out;
+        transition: ${theme.animations.transition};
     }
 
     a:hover {
-        transform: scale(1.4);
-        /* color: yellow; */
-        
+        transform: scale(1.2);
     }
 
     ul {
@@ -41,12 +39,12 @@ export const GlobalStyle = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
-        transition: .2s ease-in-out;
     }
 
-    button:hover {
+    /* button:hover {
         transform: scale(1.2);
-    }
+        transition: ${theme.animations.transition};
+    } */
 
     section {
         padding: 100px 0;
@@ -56,4 +54,4 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
   
-`
+`;

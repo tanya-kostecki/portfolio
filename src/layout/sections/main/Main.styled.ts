@@ -28,7 +28,7 @@ export const Greetings = styled.span`
   }
 
   @media ${theme.media.mobile} {
-    margin: 10px 0 15px;
+    margin: 10px 0 10px;
   }
 `;
 export const Name = styled(Greetings)`

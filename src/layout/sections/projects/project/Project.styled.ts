@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../../../styles/Theme";
 import { FlexedWrapper } from "../../../../components/FlexWrapper";
+import { StyledButton } from "../../../../components/Button";
 
 export const ProjectItem = styled.div`
   background-color: #222525;
@@ -18,10 +19,34 @@ export const ProjectItem = styled.div`
   } */
 `;
 
+
+export const ProjectLink = styled(StyledButton)`
+    position: absolute;
+    right: 32%;
+    bottom: 45%;
+    display: none;
+`
 export const Image = styled.img`
-    object-fit: cover;
-    width: 100%;
-    border-radius: 30px 30px 0px 0px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 30px 30px 0px 0px;
+
+`;
+
+export const ImageBlock = styled.div`
+    position: relative;
+
+    &:hover {
+        ${ProjectLink} {
+            display: block;
+            color: black;
+        }
+        ${Image} {
+            filter: blur(4px);
+            -webkit-filter: blur(4px);
+            transition: ${theme.animations.transition};
+        }
+    }
 `
 
 export const ProjectContent = styled.div`
@@ -38,17 +63,16 @@ export const Description = styled.p`
 `
 
 export const ProjectWrapper = styled(FlexedWrapper)`
-    padding-top: 20px;
+  padding-top: 20px;
 
-    div {
-        transition: .2s ease-in-out;
-    }
+  div {
+    transition: ${theme.animations.transition};
+  }
 
-    div:hover {
-        transform: scale(1.2);
-    }
-
-`
+  div:hover {
+    transform: scale(1.2);
+  }
+`;
 export const Link = styled.a`
     margin-left: 10px;
     position: relative;
@@ -56,6 +80,7 @@ export const Link = styled.a`
     &:hover {
         color: ${theme.colors.darkFont};
         font-size: 18px;
+        transition: ${theme.animations.transition};
 
         &::after {
             content: "";

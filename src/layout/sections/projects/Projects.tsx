@@ -52,6 +52,8 @@ export const Projects: FC = () => {
                 title={project.title}
                 description={project.description}
                 image={project.image}
+                type={project.type}
+                href={project.href}
               />
             ))}
           </FlexedWrapper>

@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import * as S from './Main.styled'
 import { FlexedWrapper } from '../../../components/FlexWrapper'
 import photo from '../../../assets/images/photo.webp'
-import { StyledButton } from "../../../components/Button";
 import { Container } from '../../../components/Container'
 import Typewriter from "typewriter-effect";
 import Tilt from "react-parallax-tilt";
@@ -31,7 +30,6 @@ export const Main: FC = () => {
                 }}
               />
             </S.Greetings>
-            <StyledButton>Contact me</StyledButton>
           </S.GreetingsBlock>
           <Tilt
             glareEnable={true}
