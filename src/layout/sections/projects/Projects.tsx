@@ -71,7 +71,7 @@ export const Projects: FC = () => {
           </FlexedWrapper>
         ) : currentFilterStatus === "all" && showMore === false ? (
           <>
-            <S.TabletWrapper wrap="wrap" justify="center">
+            <FlexedWrapper wrap="wrap" justify="center">
               <AnimatePresence>
                 {mobileProjects.map((project) => (
                   <motion.div style={{ width: '330px',
@@ -93,14 +93,14 @@ export const Projects: FC = () => {
                   </motion.div>
                 ))}
               </AnimatePresence>
-            </S.TabletWrapper>
+            </FlexedWrapper>
             <S.ProjectsButton onClick={toggleMoreOnClick}>
               SHOW MORE
             </S.ProjectsButton>
           </>
         ) : (
           <>
-            <S.TabletWrapper wrap="wrap" justify="center">
+            <FlexedWrapper wrap="wrap" justify="center">
               <AnimatePresence>
                 {filteredProjects.map((project) => (
                   <motion.div style={{ width: '330px',
@@ -122,7 +122,7 @@ export const Projects: FC = () => {
                   </motion.div>
                 ))}
               </AnimatePresence>
-            </S.TabletWrapper>
+            </FlexedWrapper>
             {currentFilterStatus === "all" ? (
               <S.ProjectsButton onClick={toggleMoreOnClick}>
                 SHOW LESS

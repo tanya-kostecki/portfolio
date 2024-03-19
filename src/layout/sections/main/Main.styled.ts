@@ -3,9 +3,10 @@ import { theme } from "../../../styles/Theme";
 import { font } from "../../../styles/Common";
 
 export const Main = styled.section`
-    min-height: 100vh;
-    display: flex;
-`
+  min-height: 100vh;
+  display: flex;
+  padding-top: 80px;
+`;
 
 export const GreetingsBlock = styled.div`
   background-image: ${theme.colors.darkAccent};

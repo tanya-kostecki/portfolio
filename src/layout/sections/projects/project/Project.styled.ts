@@ -12,35 +12,40 @@ export const ProjectItem = styled.div`
     drop-shadow(0px 0px 3px ${theme.colors.darkGradientSecond});
 `;
 
-
 export const ProjectLink = styled(StyledButton)`
-    position: absolute;
-    right: 32%;
-    bottom: 45%;
-    display: none;
-`
+  display: none;
+`;
 export const Image = styled.img`
   object-fit: cover;
   width: 100%;
   border-radius: 30px 30px 0px 0px;
-
 `;
 
 export const ImageBlock = styled.div`
-    position: relative;
+  position: relative;
+  width: 100%;
 
-    &:hover {
-        ${ProjectLink} {
-            display: block;
-            color: black;
-        }
-        ${Image} {
-            filter: blur(4px);
-            -webkit-filter: blur(4px);
-            transition: ${theme.animations.transition};
-        }
+  &:hover {
+    ${ProjectLink} {
+      display: block;
+      color: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+
+      &:hover {
+        transform: translate(-50%, -30%);
+      }
     }
-`
+    ${Image} {
+      filter: blur(4px);
+      -webkit-filter: blur(4px);
+      transition: ${theme.animations.transition};
+    }
+  }
+`;
 
 export const ProjectContent = styled.div`
     padding: 30px;

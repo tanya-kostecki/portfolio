@@ -41,16 +41,11 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
     }
 
-    /* button:hover {
-        transform: scale(1.2);
-        transition: ${theme.animations.transition};
-    } */
-
     section {
         padding: 100px 0;
 
-        @media ${theme.media.mobile} {
-            padding: 80px 0;
+        @media ${theme.media.tablet} {
+            padding: 40px 0;
         }
     }
   

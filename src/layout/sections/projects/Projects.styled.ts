@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { StyledButton } from "../../../components/Button";
 import { theme } from "../../../styles/Theme";
-import { FlexedWrapper } from "../../../components/FlexWrapper";
 
 export const Projects = styled.section`
   position: relative;
@@ -14,8 +13,6 @@ export const ProjectsButton = styled(StyledButton)`
     display: block;
     margin: 0 auto;
     padding: 18px 100px 18px 100px;
+    margin-top: 36px;
   }
-`
-export const TabletWrapper = styled(FlexedWrapper)`
-  margin-bottom: 36px;
 `
