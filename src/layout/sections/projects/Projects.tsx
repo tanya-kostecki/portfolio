@@ -2,12 +2,13 @@ import React, { FC, useState } from "react";
 import * as S from "./Projects.styled";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexedWrapper } from "../../../components/FlexWrapper";
-import { Project } from "./project/Project";
+// import { Project } from "./project/Project";
 import { projects } from "../../../constants/projects";
 import { Container } from "../../../components/Container";
 import { useGetWindowWidth } from "../../../hooks/useWindowWidth";
 import { ProjectsTabs } from "./projects-tabs/ProjectsTabs";
-import { motion, AnimatePresence } from "framer-motion";
+// import { motion, AnimatePresence } from "framer-motion";
+import { AnimateBlock } from "./AnimateBlock";
 
 export const Projects: FC = () => {
   const screen = useGetWindowWidth();
@@ -47,52 +48,12 @@ export const Projects: FC = () => {
         />
         {screen.width > 768 ? (
           <FlexedWrapper wrap="wrap" justify="center">
-            <AnimatePresence>
-              {filteredProjects.map((project) => (
-                <motion.div style={{ width: '330px',
-                  flexGrow: 1, maxWidth: '540px'}}
-                  layout
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  key={project.id}
-                >
-                  <Project
-                    key={project.id}
-                    title={project.title}
-                    description={project.description}
-                    image={project.image}
-                    type={project.type}
-                    href={project.href}
-                  />
-                </motion.div>
-              ))}
-            </AnimatePresence>
+            <AnimateBlock projects={filteredProjects}/>
           </FlexedWrapper>
         ) : currentFilterStatus === "all" && showMore === false ? (
           <>
             <FlexedWrapper wrap="wrap" justify="center">
-              <AnimatePresence>
-                {mobileProjects.map((project) => (
-                  <motion.div style={{ width: '330px',
-                  flexGrow: 1, maxWidth: '540px'}}
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    key={project.id}
-                  >
-                    <Project
-                      key={project.id}
-                      title={project.title}
-                      description={project.description}
-                      image={project.image}
-                      type={project.type}
-                      href={project.href}
-                    />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
+              <AnimateBlock projects={mobileProjects}/>
             </FlexedWrapper>
             <S.ProjectsButton onClick={toggleMoreOnClick}>
               SHOW MORE
@@ -101,27 +62,7 @@ export const Projects: FC = () => {
         ) : (
           <>
             <FlexedWrapper wrap="wrap" justify="center">
-              <AnimatePresence>
-                {filteredProjects.map((project) => (
-                  <motion.div style={{ width: '330px',
-                  flexGrow: 1, maxWidth: '540px'}}
-                    layout
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    key={project.id}
-                  >
-                    <Project
-                      key={project.id}
-                      title={project.title}
-                      description={project.description}
-                      image={project.image}
-                      type={project.type}
-                      href={project.href}
-                    />
-                  </motion.div>
-                ))}
-              </AnimatePresence>
+              <AnimateBlock projects={filteredProjects}/>
             </FlexedWrapper>
             {currentFilterStatus === "all" ? (
               <S.ProjectsButton onClick={toggleMoreOnClick}>
