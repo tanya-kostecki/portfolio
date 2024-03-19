@@ -13,6 +13,7 @@ export const projects = [
     image: project1,
     type: "landing",
     href: "https://github.com/tanya-kostecki",
+    id: 1
   },
   {
     title: "The Project Title",
@@ -21,6 +22,7 @@ export const projects = [
     image: project2,
     type: "landing",
     href: "https://github.com/tanya-kostecki",
+    id: 2
   },
   {
     title: "The Project Title",
@@ -29,6 +31,7 @@ export const projects = [
     image: project3,
     type: "spa",
     href: "https://github.com/tanya-kostecki",
+    id: 3
   },
   {
     title: "The Project Title",
@@ -37,6 +40,7 @@ export const projects = [
     image: project4,
     type: "react",
     href: "https://github.com/tanya-kostecki",
+    id: 4
   },
   {
     title: "The Project Title",
@@ -45,6 +49,7 @@ export const projects = [
     image: project5,
     type: "react",
     href: "https://github.com/tanya-kostecki",
+    id: 5
   },
   {
     title: "The Project Title",
@@ -53,5 +58,6 @@ export const projects = [
     image: project6,
     type: "spa",
     href: "https://github.com/tanya-kostecki",
+    id: 6
   },
 ];
