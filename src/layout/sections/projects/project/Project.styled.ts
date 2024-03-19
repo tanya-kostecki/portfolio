@@ -39,7 +39,32 @@ export const Description = styled.p`
 
 export const ProjectWrapper = styled(FlexedWrapper)`
     padding-top: 20px;
+
+    div {
+        transition: .2s ease-in-out;
+    }
+
+    div:hover {
+        transform: scale(1.2);
+    }
+
 `
 export const Link = styled.a`
     margin-left: 10px;
+    position: relative;
+
+    &:hover {
+        color: ${theme.colors.darkFont};
+        font-size: 18px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            right: 0;
+            background-image: ${theme.colors.darkAccent};
+        }
+    }
 `
