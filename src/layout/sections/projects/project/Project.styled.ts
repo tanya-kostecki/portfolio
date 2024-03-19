@@ -3,19 +3,20 @@ import { theme } from "../../../../styles/Theme";
 import { FlexedWrapper } from "../../../../components/FlexWrapper";
 
 export const ProjectItem = styled.div`
-    background-color: #222525;
-    border-radius: 30px 30px 0px 0px;
-    margin: 10px;
-    max-width: 540px;
-    width: 330px;
-    /* transition: .4s ease; */
-    flex-grow: 1;
+  background-color: #222525;
+  border-radius: 30px 30px 0px 0px;
+  margin: 10px;
+  max-width: 540px;
+  width: 330px;
+  flex-grow: 1;
+  filter: drop-shadow(0px 0px 3px ${theme.colors.darkGradientFirst})
+        drop-shadow(0px 0px 3px ${theme.colors.darkGradientSecond});
 
-    &:hover {
-        /* transform: scale(1.05); */
-        filter: drop-shadow(0px 0px 5px ${theme.colors.darkGradientFirst}) drop-shadow(0px 0px 5px ${theme.colors.darkGradientSecond});
-    }
-`
+  /* &:hover {
+    filter: drop-shadow(0px 0px 5px ${theme.colors.darkGradientFirst})
+      drop-shadow(0px 0px 5px ${theme.colors.darkGradientSecond});
+  } */
+`;
 
 export const Image = styled.img`
     object-fit: cover;

@@ -1,11 +1,18 @@
 import React, { FC } from 'react'
-import * as S from './Menu.styled'
+import styled from "styled-components";
 import { MenuItems } from '../menu-items/MenuItems'
+import { theme } from "../../../styles/Theme";
 
 export const Menu: FC = () => {
   return (
-    <S.Menu>
-        <MenuItems/>
-    </S.Menu>
-  )
+    <StyledMenu>
+      <MenuItems />
+    </StyledMenu>
+  );
 }
+
+const StyledMenu = styled.nav`
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+`;

@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         color: ${theme.colors.darkFont};
-        transition: .2s ease;
+        transition: .2s ease-in-out;
     }
 
     a:hover {
@@ -40,7 +40,7 @@ export const GlobalStyle = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
-        transition: .2s ease;
+        transition: .2s ease-in-out;
     }
 
     button:hover {
