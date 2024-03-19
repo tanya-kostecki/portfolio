@@ -4,10 +4,12 @@ import { SectionTitle } from '../../../components/SectionTitle'
 import { Skill } from './skill/Skill'
 import { skills } from '../../../constants/skills'
 import { Container } from '../../../components/Container'
-import { MobileSkill } from './skill/MobileSkill'
 import { Fade } from "react-awesome-reveal";
+import { useGetWindowWidth } from '../../../hooks/useWindowWidth'
 
 export const Skills: FC = () => {
+  const screen = useGetWindowWidth()
+  const maxWidth = 655
   return (
     <S.Skills id="tech">
       <Container>
@@ -20,24 +22,12 @@ export const Skills: FC = () => {
                 key={index}
                 iconId={skill.iconId}
                 fill={skill.fill}
-                name={skill.name}
+                width={screen.width > maxWidth ? '120px' : '75px'}
+                height={screen.width > maxWidth ? '120px' : '75px'}
               />
             ))}
           </Fade>
         </S.SkillsContainer>
-
-        <S.MobileSkillsContainer>
-          <Fade cascade damping={0.2}>
-            {skills.map((skill, index) => (
-              <MobileSkill
-                key={index}
-                iconId={skill.iconId}
-                fill={skill.fill}
-                name={skill.name}
-              />
-            ))}
-          </Fade>
-        </S.MobileSkillsContainer>
       </Container>
     </S.Skills>
   );
