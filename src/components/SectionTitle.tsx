@@ -7,6 +7,8 @@ export const SectionTitle = styled.h2`
     letter-spacing: 4%;
     
     padding: 0 0 20px 10px;
+
+    margin-bottom: 20px;
 `
 
 export const SectionParagraph = styled.p`  

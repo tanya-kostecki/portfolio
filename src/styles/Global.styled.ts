@@ -45,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 100px 0;
 
         @media ${theme.media.tablet} {
-            padding: 40px 0;
+            padding: 60px 0;
         }
     }
   

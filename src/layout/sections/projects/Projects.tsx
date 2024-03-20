@@ -46,31 +46,27 @@ export const Projects: FC = () => {
           changeFilterStatus={changeFilterStatus}
           currentFilterStatus={currentFilterStatus}
         />
-        {screen.width > 768 ? (
-          <FlexedWrapper wrap="wrap" justify="center">
+        <FlexedWrapper wrap="wrap" justify="center">
+          {screen.width > 768 ? (
             <AnimateBlock projects={filteredProjects}/>
-          </FlexedWrapper>
-        ) : currentFilterStatus === "all" && showMore === false ? (
-          <>
-            <FlexedWrapper wrap="wrap" justify="center">
+          ) : currentFilterStatus === "all" && showMore === false ? (
+            <>
               <AnimateBlock projects={mobileProjects}/>
-            </FlexedWrapper>
-            <S.ProjectsButton onClick={toggleMoreOnClick}>
-              SHOW MORE
-            </S.ProjectsButton>
-          </>
-        ) : (
-          <>
-            <FlexedWrapper wrap="wrap" justify="center">
-              <AnimateBlock projects={filteredProjects}/>
-            </FlexedWrapper>
-            {currentFilterStatus === "all" ? (
               <S.ProjectsButton onClick={toggleMoreOnClick}>
-                SHOW LESS
+                SHOW MORE
               </S.ProjectsButton>
-            ) : null}
-          </>
+            </>
+          ) : (
+            <>              
+              <AnimateBlock projects={filteredProjects}/>
+              {currentFilterStatus === "all" ? (
+                <S.ProjectsButton onClick={toggleMoreOnClick}>
+                  SHOW LESS
+                </S.ProjectsButton>
+              ) : null}
+            </>
         )}
+        </FlexedWrapper>
       </Container>
     </S.Projects>
   );

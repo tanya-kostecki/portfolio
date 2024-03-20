@@ -5,7 +5,7 @@ import { font } from "../../../styles/Common";
 export const Main = styled.section`
   min-height: 100vh;
   display: flex;
-  padding-top: 80px;
+  /* padding-top: 80px; */
 `;
 
 export const GreetingsBlock = styled.div`

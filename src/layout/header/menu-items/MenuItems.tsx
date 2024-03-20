@@ -15,7 +15,7 @@ export const MenuItems: FC = () => {
             smooth={true}
             activeClass="active"
             spy={true}
-            offset={-100}
+            offset={-1}
           >
             {item.title}
           </NavLink>
