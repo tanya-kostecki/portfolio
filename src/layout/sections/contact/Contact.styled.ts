@@ -7,7 +7,7 @@ export const Contacts = styled.section`
   min-height: 95vh;
 `;
 
-export const StyledForm = styled.form`
+export const Form = styled.form`
   max-width: 540px;
   width: 100%;
   display: flex;
