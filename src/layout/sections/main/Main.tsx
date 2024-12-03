@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import * as S from './Main.styled'
 import { FlexedWrapper } from '../../../components/FlexWrapper'
-import photo from '../../../assets/images/photo.webp'
+import photo from '../../../assets/images/photo.jpg'
 import { Container } from '../../../components/Container'
 import Typewriter from "typewriter-effect";
 import Tilt from "react-parallax-tilt";

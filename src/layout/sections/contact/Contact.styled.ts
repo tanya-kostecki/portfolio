@@ -4,7 +4,7 @@ import { theme } from "../../../styles/Theme";
 export const Contacts = styled.section`
   position: relative;
   background-color: ${theme.colors.darkBg};
-  min-height: 95vh;
+  //min-height: 95vh;
 `;
 
 export const Form = styled.form`
@@ -28,11 +28,10 @@ export const Field = styled.input`
   border: 1px solid ${theme.colors.darkFont};
   border-radius: 6px;
   padding: 15px 18px;
-  font-family: Montserrat;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: left;
   color: ${theme.colors.darkFont};
 
@@ -49,7 +48,6 @@ export const Field = styled.input`
 
 export const ContactDetail = styled.span`
   display: block;
-  font-family: Montserrat;
   font-size: 16px;
   font-weight: 500;
   text-align: left;

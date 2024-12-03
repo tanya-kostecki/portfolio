@@ -10,7 +10,6 @@ import { Main } from './layout/sections/main/Main';
 import { Projects } from './layout/sections/projects/Projects';
 import { Skills } from './layout/sections/skills/Skills';
 
-
 function App() {
     const screen = useGetWindowWidth()
     return (

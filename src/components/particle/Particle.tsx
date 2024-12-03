@@ -1,24 +1,18 @@
 import { useCallback } from "react";
-import type { Container, Engine } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
-//import { loadFull } from "tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
 
 export const Particle = () => {
     const particlesInit = useCallback(async (engine: Engine) => {
-        console.log(engine);
         await loadSlim(engine);
     }, []);
 
-    const particlesLoaded = useCallback(async (container: Container | undefined) => {
-        await console.log(container);
-    }, []);
     return (
         <Particles
             id="tsparticles"
             init={particlesInit}
-            loaded={particlesLoaded}
             options={{
                 "particles": {
                   "number": {
@@ -75,7 +69,7 @@ export const Particle = () => {
                   },
                   "move": {
                     "enable": true,
-                    "speed": 6,
+                    "speed": 1,
                     "direction": "none",
                     "random": false,
                     "straight": false,

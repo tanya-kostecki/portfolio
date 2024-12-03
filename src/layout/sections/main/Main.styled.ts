@@ -5,7 +5,6 @@ import { font } from "../../../styles/Common";
 export const Main = styled.section`
   min-height: 100vh;
   display: flex;
-  /* padding-top: 80px; */
 `;
 
 export const GreetingsBlock = styled.div`
@@ -57,6 +56,8 @@ export const PhotoWrapper = styled.div`
 
     @media ${theme.media.mobile} {
         margin-bottom: 25px;
+        margin-top: 40px;
+
     }
 
     &::before {
