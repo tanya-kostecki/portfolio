@@ -9,6 +9,7 @@ type ProjectType = {
     image: string;
     type?: string;
     href?: string
+    deploy?: string
 }
 type ProjectsPropsType = {
     projects: ProjectType[];
@@ -32,6 +33,7 @@ export const AnimateBlock: FC<ProjectsPropsType> = (props) => {
             image={project.image}
             type={project.type}
             href={project.href}
+            deploy={project.deploy}
             />
         </motion.div>
         ))}

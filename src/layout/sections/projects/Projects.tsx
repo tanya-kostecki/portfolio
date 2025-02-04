@@ -49,7 +49,7 @@ export const Projects: FC = () => {
         <FlexedWrapper wrap="wrap" justify="center">
           {screen.width > 768 ? (
             <AnimateBlock projects={filteredProjects}/>
-          ) : currentFilterStatus === "all" && showMore === false ? (
+          ) : currentFilterStatus === "all" && !showMore ? (
             <>
               <AnimateBlock projects={mobileProjects}/>
               <S.ProjectsButton onClick={toggleMoreOnClick}>

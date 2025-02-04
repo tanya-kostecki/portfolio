@@ -9,6 +9,7 @@ type ProjectPropsType = {
     description: string;
     type?: string;
     href?: string;
+    deploy?: string
 }
 export const Project: FC<ProjectPropsType> = (props) => {
   return (
@@ -24,11 +25,11 @@ export const Project: FC<ProjectPropsType> = (props) => {
             <S.ProjectWrapper justify='space-between' align='flex-end'>
                 <div>
                     <Icon iconId='preview' height='17px' width='17px' viewBox='0 0 17 17' stroke={theme.colors.darkFont} fill='none'/>
-                    <S.Link href='#'>live preview</S.Link>
+                    <S.Link href={props.deploy}>live preview</S.Link>
                 </div>
                 <div>
                     <Icon iconId='github' height='20px' width='20px' viewBox='0 0 130 85' fill={theme.colors.darkFont}/>
-                    <S.Link href='#'>view code</S.Link>
+                    <S.Link href={props.href}>view code</S.Link>
                 </div>
             </S.ProjectWrapper>
         </S.ProjectContent>

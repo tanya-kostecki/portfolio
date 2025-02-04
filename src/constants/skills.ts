@@ -1,5 +1,3 @@
-import { theme } from "../styles/Theme"
-
 export const skills = [
     {
         iconId: 'html',
@@ -34,19 +32,9 @@ export const skills = [
         name: 'Styled Components'
     },
     {
-        iconId: 'express',
-        name: 'Express',
-        fill: theme.colors.darkFont
-    },
-    {
-        iconId: 'mongodb',
-        name: 'MongoDB'
-    },
-    {
         iconId: 'git',
         name: 'Git'
     },
-    
     {
         iconId: 'vscode',
         name: 'VSCode'
@@ -55,4 +43,29 @@ export const skills = [
         iconId: 'docker',
         name: 'Docker'
     },
+    {
+        iconId: 'tailwind',
+        name: 'Tailwind CSS'
+    },
+    {
+        iconId: 'webstorm',
+        name: 'Webstorm'
+    },
+    {
+        iconId: 'storybook',
+        name: 'Storybook'
+    },
+    {
+        iconId: 'material-ui',
+        name: 'Material UI'
+    },
+    {
+        iconId: 'angular',
+        name: 'Angular'
+    },
+    {
+        iconId: 'next-js',
+        name: 'Next JS'
+    },
+
 ]

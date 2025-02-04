@@ -17,11 +17,10 @@ export const Skills: FC = () => {
 
         <S.SkillsContainer>
           <Fade cascade damping={0.2}>
-            {skills.map((skill, index) => (
+            {skills.map((skill) => (
               <Skill
-                key={index}
+                key={skill.iconId}
                 iconId={skill.iconId}
-                fill={skill.fill}
                 width={screen.width > maxWidth ? '120px' : '75px'}
                 height={screen.width > maxWidth ? '120px' : '75px'}
               />
