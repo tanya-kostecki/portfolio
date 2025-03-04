@@ -1,7 +1,6 @@
 import React, { FC, useState } from "react";
 import * as S from "./Projects.styled";
 import { SectionTitle } from "../../../components/SectionTitle";
-import { FlexedWrapper } from "../../../components/FlexWrapper";
 import { projects } from "../../../constants/projects";
 import { Container } from "../../../components/Container";
 import { useGetWindowWidth } from "../../../hooks/useWindowWidth";
@@ -44,27 +43,27 @@ export const Projects: FC = () => {
           changeFilterStatus={changeFilterStatus}
           currentFilterStatus={currentFilterStatus}
         />
-        <FlexedWrapper wrap="wrap" justify="center">
+        <S.ProjectsGrid>
           {screen.width > 768 ? (
-            <AnimateBlock projects={filteredProjects}/>
-          ) : currentFilterStatus === "all" && !showMore ? (
-            <>
-              <AnimateBlock projects={mobileProjects}/>
-              <S.ProjectsButton onClick={toggleMoreOnClick}>
-                SHOW MORE
-              </S.ProjectsButton>
-            </>
-          ) : (
-            <>              
               <AnimateBlock projects={filteredProjects}/>
-              {currentFilterStatus === "all" ? (
+          ) : currentFilterStatus === "all" && !showMore ? (
+              <>
+                <AnimateBlock projects={mobileProjects}/>
                 <S.ProjectsButton onClick={toggleMoreOnClick}>
-                  SHOW LESS
+                  SHOW MORE
                 </S.ProjectsButton>
-              ) : null}
-            </>
-        )}
-        </FlexedWrapper>
+              </>
+          ) : (
+              <>
+                <AnimateBlock projects={filteredProjects}/>
+                {currentFilterStatus === "all" ? (
+                    <S.ProjectsButton onClick={toggleMoreOnClick}>
+                      SHOW LESS
+                    </S.ProjectsButton>
+                ) : null}
+              </>
+          )}
+        </S.ProjectsGrid>
       </Container>
     </S.Projects>
   );

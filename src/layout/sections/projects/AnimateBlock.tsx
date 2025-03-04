@@ -18,8 +18,8 @@ export const AnimateBlock: FC<ProjectsPropsType> = (props) => {
   return (
     <AnimatePresence>
         {props.projects.map((project) => (
-        <motion.div style={{ width: '330px',
-            flexGrow: 1, maxWidth: '540px'}}
+        <motion.div style={{ width: '100%',
+             maxWidth: '540px'}}
             layout
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
