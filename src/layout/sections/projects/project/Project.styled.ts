@@ -5,8 +5,9 @@ import { StyledButton } from "../../../../components/Button";
 
 export const ProjectItem = styled.div`
   background-color: #222525;
-  border-radius: 30px 30px 0px 0px;
+  border-radius: 30px 30px 0 0;
   margin: 10px;
+  height: 530px;
 
   filter: drop-shadow(0px 0px 3px ${theme.colors.darkGradientFirst})
     drop-shadow(0px 0px 3px ${theme.colors.darkGradientSecond});
@@ -18,7 +19,7 @@ export const ProjectLink = styled(StyledButton)`
 export const Image = styled.img`
   object-fit: cover;
   width: 100%;
-  border-radius: 30px 30px 0px 0px;
+  border-radius: 30px 30px 0 0;
 `;
 
 export const ImageBlock = styled.div`

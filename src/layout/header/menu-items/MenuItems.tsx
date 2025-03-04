@@ -1,6 +1,6 @@
 import React, {FC, useEffect, useState} from "react";
 import { items } from "../../../constants/menu-items";
-import {Link, scroller} from "react-scroll";
+import {Link} from "react-scroll";
 import styled from "styled-components";
 import { font } from "../../../styles/Common";
 import { theme } from "../../../styles/Theme";
@@ -9,27 +9,17 @@ export const MenuItems: FC = () => {
   const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
-    scroller.scrollTo("home", {
-      duration: 0,
-      delay: 0,
-      smooth: false,
-      offset: 0,
-      // offset: -50
-    });
-  }, []);
-
-  useEffect(() => {
     const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
               setActiveSection(entry.target.id);
             }
           });
         },
         {
           root: null,
-          threshold: 0.5,
+          threshold: 0.2,
         }
     );
     document.querySelectorAll("section").forEach((section) => {
@@ -50,7 +40,7 @@ export const MenuItems: FC = () => {
             smooth={true}
             activeClass="active"
             spy={true}
-            // offset={-50}
+            offset={-50}
             $isActive={item.href === activeSection}
           >
             {item.title}
@@ -88,16 +78,3 @@ const NavLink = styled(Link)<{ $isActive: boolean }>`
     color: transparent;
   }
 `;
-// const NavLink = styled(Link)`
-//   cursor: pointer;
-//   ${font({ family: "Montserrat", weight: 500, Fmin: 16, Fmax: 16 })};
-//   display: inline-block;
-//
-//   &.active, &:hover {
-//     transform: scale(1.4);
-//     background-image: ${theme.colors.darkAccent};
-//     background-clip: text;
-//     -webkit-background-clip: text;
-//     color: transparent;
-//   }
-// `;

@@ -2,12 +2,10 @@ import React, { FC, useState } from "react";
 import * as S from "./Projects.styled";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { FlexedWrapper } from "../../../components/FlexWrapper";
-// import { Project } from "./project/Project";
 import { projects } from "../../../constants/projects";
 import { Container } from "../../../components/Container";
 import { useGetWindowWidth } from "../../../hooks/useWindowWidth";
 import { ProjectsTabs } from "./projects-tabs/ProjectsTabs";
-// import { motion, AnimatePresence } from "framer-motion";
 import { AnimateBlock } from "./AnimateBlock";
 
 export const Projects: FC = () => {

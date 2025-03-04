@@ -37,13 +37,13 @@ export const projects = [
     id: 3
   },
   {
-    title: "The Project Title",
+    title: "Social Network",
     description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+      "A social network built with CRA with Typescript and Redux Toolkit. Users can login using a free account, follow and unfollow other users ",
     image: project4,
     type: "react",
-    deploy: "https://github.com/tanya-kostecki",
-    href: "https://github.com/tanya-kostecki",
+    deploy: "https://github.com/tanya-kostecki/samurai-network",
+    href: "https://github.com/tanya-kostecki/samurai-network",
     id: 4
   },
   {
