@@ -1,18 +1,18 @@
-export const projectTabs = [
+type ProjectTab = {
+    title: 'All' | 'Personal' | 'Team',
+    status: 'all' | 'personal' | 'team'
+}
+export const projectTabs: ProjectTab[] = [
     {
         title: 'All',
         status: 'all'
     },
     {
-        title: 'React',
-        status: 'react'
+        title: 'Personal',
+        status: 'personal'
     },
     {
-        title: 'Landing',
-        status: 'landing'
-    },
-    {
-        title: 'SPA',
-        status: 'spa'
+        title: 'Team',
+        status: 'team'
     },
 ]

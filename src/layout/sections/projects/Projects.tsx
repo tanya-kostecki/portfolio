@@ -10,23 +10,20 @@ import { AnimateBlock } from "./AnimateBlock";
 export const Projects: FC = () => {
   const screen = useGetWindowWidth();
 
-  const [currentFilterStatus, setCurrentFilterStatus] = useState("all");
+  const [currentFilterStatus, setCurrentFilterStatus] = useState<'all' | 'team' | 'personal'>("all");
   let filteredProjects = projects;
   const mobileProjects = projects.slice(4);
 
-  if (currentFilterStatus === "landing") {
-    filteredProjects = projects.filter((project) => project.type === "landing");
+  if (currentFilterStatus === "personal") {
+    filteredProjects = projects.filter((project) => project.type === "personal");
   }
 
-  if (currentFilterStatus === "react") {
-    filteredProjects = projects.filter((project) => project.type === "react");
+  if (currentFilterStatus === "team") {
+    filteredProjects = projects.filter((project) => project.type === "team");
   }
 
-  if (currentFilterStatus === "spa") {
-    filteredProjects = projects.filter((project) => project.type === "spa");
-  }
 
-  const changeFilterStatus = (value: string) => {
+  const changeFilterStatus = (value: 'all' | 'team' | 'personal') => {
     setCurrentFilterStatus(value);
   };
 

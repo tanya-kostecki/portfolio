@@ -19,6 +19,9 @@ export const ProjectsButton = styled(StyledButton)`
 export const ProjectsGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    place-items: center;
-    gap: 10px;
+    row-gap: 20px;
+
+    @media ${theme.media.tablet} {
+        justify-items: center;
+    }
 `

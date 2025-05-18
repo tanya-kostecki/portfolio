@@ -2,68 +2,85 @@ import project1 from '../assets/images/kanban.webp'
 import project2 from '../assets/images/nusic-app.webp'
 import project3 from '../assets/images/nft-landing.webp'
 import project4 from '../assets/images/project4.webp'
-import project5 from '../assets/images/project5.webp'
-import project6 from '../assets/images/project6.webp'
+import inctagram from '../assets/images/inctagram.webp'
+import sdo from '../assets/images/sdo.webp'
 
 export const projects = [
   {
     title: "Kanban",
+    stack: "React, TypeScript, Vite, React Hook Form, Styled Components, and Context API",
     description:
-      "A responsive and interactive Kanban-style to-do list app that allows users to manage their tasks with different statuses. Built using React, TypeScript, Vite, React Hook Form, Styled Components, and Context API.",
+        "A responsive and interactive Kanban-style to-do list app that allows users to manage their tasks with different statuses. Built using React, TypeScript, Vite, React Hook Form, Styled Components, and Context API.",
     image: project1,
-    type: "react",
+    type: "personal",
     deploy: "https://skypro-kanban-pearl.vercel.app",
     href: 'https://github.com/tanya-kostecki/skypro-kanban',
     id: 1
   },
   {
     title: "Music App",
+    stack: "Next.js, TypeScript, and Redux Toolkit",
     description:
-      "A music streaming app built with Next.js, TypeScript, and Redux Toolkit. Users can sign up, log in, like tracks, and create a favorites track-list. The app features track filtering by author, year, and genre, as well as a search function to find tracks quickly.",
+        "A music streaming app built with Next.js, TypeScript, and Redux Toolkit. Users can sign up, log in, like tracks, and create a favorites track-list. The app features track filtering by author, year, and genre, as well as a search function to find tracks quickly.",
     image: project2,
-    type: "react",
+    type: "personal",
     deploy: "https://github.com/tanya-kostecki/skypro-music-app",
     href: "https://github.com/tanya-kostecki/skypro-music-app",
     id: 2
   },
   {
     title: "NFT Landing",
+    stack: "React, TypeScript, Styled Components",
     description:
-      "A fully responsive NFT Landing Page built with React and TypeScript. This static landing page provides a sleek and visually appealing interface for showcasing NFTs, featuring smooth animations and a clean, minimalist design.",
+        "A fully responsive NFT Landing Page built with React and TypeScript. This static landing page provides a sleek and visually appealing interface for showcasing NFTs, featuring smooth animations and a clean, minimalist design.",
     image: project3,
-    type: "landing",
+    type: "personal",
     deploy: "https://tanya-kostecki.github.io/nft-landing/",
     href: "https://github.com/tanya-kostecki/nft-landing",
     id: 3
   },
   {
     title: "Social Network",
+    stack: "React, Typescript and Redux Toolkit",
     description:
-      "A social network built with CRA with Typescript and Redux Toolkit. Users can login using a free account, follow and unfollow other users ",
+        "A social network built with CRA with Typescript and Redux Toolkit. Users can login using a free account, follow and unfollow other users ",
     image: project4,
-    type: "react",
+    type: "personal",
     deploy: "https://github.com/tanya-kostecki/samurai-network",
     href: "https://github.com/tanya-kostecki/samurai-network",
     id: 4
   },
   {
-    title: "The Project Title",
+    title: "Inctagram",
+    stack: "Next.js, TypeScript, Tailwind CSS, and MobX",
     description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    image: project5,
-    type: "react",
-    deploy: "https://github.com/tanya-kostecki",
-    href: "https://github.com/tanya-kostecki",
+        "An Instagram clone offering a complete social media experience. Users can sign up or log in via email, Google, or GitHub, manage personal profiles, share images, follow others, like posts, and leave comments.",
+    image: inctagram,
+    type: "team",
+    deploy: "https://car-robot.ru/en",
+    href: "https://github.com/Mechanics-cloud/OurProject",
     id: 5
   },
-  {
-    title: "The Project Title",
+ /* {
+    title: "Inctagram SuperAdmin",
     description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
+        "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
     image: project6,
-    type: "spa",
+    type: "team",
     deploy: "https://github.com/tanya-kostecki",
-    href: "https://github.com/tanya-kostecki",
+    href: "https://github.com/Mechanics-cloud/admin-net",
     id: 6
+  },*/
+
+  {
+    title: "SDO Metro",
+    stack: "React with Vite, TypeScript, Redux Toolkit",
+    description:
+        "An MVP of an online employee training platform developed for the Moscow Metro. The platform features secure authentication for both regular employees and methodologists. Regular users can browse available courses and take lessons, while methodologists have access to a course builder that allows them to create new courses and edit existing ones.",
+    image: sdo,
+    type: "team",
+    deploy: "https://edu.sdo-metro.ru/",
+    href: "https://github.com/aheadsps/sdo_mm",
+    id: 7
   },
 ];

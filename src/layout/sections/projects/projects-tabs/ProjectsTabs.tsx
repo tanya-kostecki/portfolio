@@ -4,8 +4,8 @@ import { theme } from '../../../../styles/Theme';
 import { projectTabs } from "../../../../constants/projects-tabs";
 
 type ProjectsTabsPropsType = {
-  changeFilterStatus: (value: string) => void;
-  currentFilterStatus: string;
+  changeFilterStatus: (value: 'all' | 'team' | 'personal') => void;
+  currentFilterStatus: 'all' | 'team' | 'personal';
 };
 export const ProjectsTabs: FC<ProjectsTabsPropsType> = (props) => {
   return (
@@ -36,7 +36,6 @@ const ProjectsTabsList = styled.ul`
 
   li:hover {
     transform: scale(1.2);
-    /* color: yellow; */
   }
 
   @media ${theme.media.mobile} {
