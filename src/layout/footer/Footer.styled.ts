@@ -12,17 +12,7 @@ export const Footer = styled.footer`
     display: none;
   }
 `
-export const ContactDetails = styled.div`
-  display: flex;
-  flex-direction: column;
 
-  a:hover {
-    background-image: ${theme.colors.darkAccent};
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-`
 export const ContactText = styled.span`
   display: block;
   ${font({ family: 'Montserrat, sans-serif', weight: 600, color: theme.colors.darkFont, Fmax: 22, Fmin: 12 })};
@@ -32,6 +22,7 @@ export const ContactText = styled.span`
 export const FooterWrapper = styled(FlexedWrapper)`
   padding-top: 20px;
   position: relative;
+  align-items: center;
 
   &::before {
     content: "";
