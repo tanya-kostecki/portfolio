@@ -4,6 +4,7 @@ import project3 from '../assets/images/nft-landing.webp'
 import project4 from '../assets/images/project4.webp'
 import inctagram from '../assets/images/inctagram.webp'
 import sdo from '../assets/images/sdo.webp'
+import admin from '../assets/images/admin.webp'
 
 export const projects = [
   {
@@ -61,17 +62,17 @@ export const projects = [
     href: "https://github.com/Mechanics-cloud/OurProject",
     id: 5
   },
- /* {
+  {
     title: "Inctagram SuperAdmin",
+    stack: "Next.js, TypeScript, Tailwind CSS, GraphQL and Apollo Client",
     description:
-        "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    image: project6,
+        "Admin for Inctagram",
+    image: admin,
     type: "team",
     deploy: "https://github.com/tanya-kostecki",
     href: "https://github.com/Mechanics-cloud/admin-net",
     id: 6
-  },*/
-
+  },
   {
     title: "SDO Metro",
     stack: "React with Vite, TypeScript, Redux Toolkit",

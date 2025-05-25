@@ -6,6 +6,8 @@ import { StyledButton } from "../../../../components/Button";
 export const ProjectItem = styled.div`
   background-color: #222525;
   border-radius: 30px 30px 0 0;
+    display: flex;
+    flex-direction: column;
   margin: 10px;
   min-height: 530px;
     height: 100%;
@@ -52,6 +54,10 @@ export const ImageBlock = styled.div`
 
 export const ProjectContent = styled.div`
     padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 
 export const Title = styled.h3`
@@ -65,6 +71,7 @@ export const Description = styled.p`
 
 export const ProjectWrapper = styled(FlexedWrapper)`
   padding-top: 20px;
+    height: fit-content;
 
   div {
     transition: ${theme.animations.transition};
@@ -92,5 +99,14 @@ export const Link = styled.a`
             right: 0;
             background-image: ${theme.colors.darkAccent};
         }
+    }
+`
+
+export const StackBlock = styled.div`
+    margin-bottom: 20px;
+    
+    & span:first-child {
+        font-weight: 700;
+        text-decoration: underline;
     }
 `

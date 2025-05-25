@@ -10,6 +10,7 @@ type ProjectType = {
     type?: string;
     href?: string
     deploy?: string
+    stack: string
 }
 type ProjectsPropsType = {
     projects: ProjectType[];
@@ -34,6 +35,7 @@ export const AnimateBlock: FC<ProjectsPropsType> = (props) => {
             type={project.type}
             href={project.href}
             deploy={project.deploy}
+            stack={project.stack}
             />
         </motion.div>
         ))}

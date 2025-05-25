@@ -10,6 +10,7 @@ type ProjectPropsType = {
     type?: string;
     href?: string;
     deploy?: string
+    stack: string
 }
 export const Project: FC<ProjectPropsType> = (props) => {
   return (
@@ -19,8 +20,14 @@ export const Project: FC<ProjectPropsType> = (props) => {
             <S.ProjectLink as='a' href={props.href}>View Project</S.ProjectLink>
         </S.ImageBlock>
         <S.ProjectContent>
-            <S.Title>{props.title}</S.Title>
-            <S.Description>{props.description}</S.Description>
+            <div>
+                <S.Title>{props.title}</S.Title>
+                <S.StackBlock>
+                    <span>Tech stack: </span>
+                    <span>{props.stack}</span>
+                </S.StackBlock>
+                <S.Description>{props.description}</S.Description>
+            </div>
 
             <S.ProjectWrapper justify='space-between' align='flex-end'>
                 <div>
