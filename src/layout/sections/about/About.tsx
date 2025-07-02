@@ -14,10 +14,13 @@ export const About: FC = () => {
             I'm a passionate frontend developer based in Linz, Austria, with 2 years of hands-on experience. My expertise lies in HTML, CSS, JavaScript, React, and TypeScript, and I thrive on bringing designs to life while ensuring a seamless user experience.
           </S.Paragraph>
           <S.Paragraph>
-            I enjoy every aspect of frontend development and am always eager to expand my skill set. Currently, I’m diving into Angular and planning to explore React Native to broaden my expertise. My ultimate goal is to transition into a full-stack developer role.
+            I enjoy every aspect of frontend development and am always eager to expand my skill set. Currently, I’m learning Node.js to deepen my backend knowledge with the goal of becoming a full-stack developer.
           </S.Paragraph>
           <S.Paragraph>
-            Beyond coding, I love solving algorithmic challenges on Codewars, which sharpens my problem-solving skills. I also have a passion for languages: I practice my English through articles and YouTube videos on frontend development, and work on improving my German.
+            Beyond coding, I love solving algorithmic challenges on Codewars and Leetcode, which sharpens my problem-solving skills. I also have a passion for languages: I practice my English through articles and YouTube videos on frontend development, and work on improving my German.
+          </S.Paragraph>
+          <S.Paragraph>
+            Beyond technical skills, I value effective teamwork, open communication, and a collaborative mindset. I’m organized, detail-oriented, and capable of managing multiple tasks efficiently. My flexibility and adaptability help me learn quickly and handle challenges effectively.
           </S.Paragraph>
           <S.Paragraph>
             I’m always open to new challenges and opportunities that push me to grow both professionally and personally.

@@ -69,38 +69,51 @@ export const Description = styled.p`
     width: 100%;
 `
 
-export const ProjectWrapper = styled(FlexedWrapper)`
-  padding-top: 20px;
+export const ProjectWrapper = styled(FlexedWrapper)<{ $isDeployed: boolean }>`
+    padding-top: 20px;
     height: fit-content;
 
-  div {
-    transition: ${theme.animations.transition};
-  }
-
-  div:hover {
-    transform: scale(1.2);
-  }
-`;
-export const Link = styled.a`
-    margin-left: 10px;
-    position: relative;
-
-    &:hover {
-        color: ${theme.colors.darkFont};
-        font-size: 18px;
+    div {
         transition: ${theme.animations.transition};
-
-        &::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 3px;
-            bottom: 0;
-            right: 0;
-            background-image: ${theme.colors.darkAccent};
-        }
     }
-`
+
+    ${({ $isDeployed }) =>
+            $isDeployed &&
+            `
+    div:hover {
+      transform: scale(1.2);
+    }
+  `}
+`;
+export const Link = styled.a<{ $isDeployed?: boolean }>`
+  margin-left: 10px;
+  position: relative;
+  opacity: ${({ $isDeployed }) => ($isDeployed ? 1 : 0.5)};
+  pointer-events: ${({ $isDeployed }) => ($isDeployed ? 'auto' : 'none')};
+  color: ${({ $isDeployed }) => ($isDeployed ? theme.colors.darkFont : 'gray')};
+  text-decoration: none;
+
+  ${({ $isDeployed }) =>
+    $isDeployed &&
+    `
+    &:hover {
+      color: ${theme.colors.darkFont};
+      font-size: 18px;
+      transition: ${theme.animations.transition};
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        right: 0;
+        background-image: ${theme.colors.darkAccent};
+      }
+    }
+  `}
+`;
+
 
 export const StackBlock = styled.div`
     margin-bottom: 20px;

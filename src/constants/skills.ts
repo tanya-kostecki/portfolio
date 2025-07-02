@@ -55,14 +55,14 @@ export const skills = [
         iconId: 'storybook',
         name: 'Storybook'
     },
-    {
+  /*  {
         iconId: 'material-ui',
         name: 'Material UI'
     },
     {
         iconId: 'angular',
         name: 'Angular'
-    },
+    },*/
     {
         iconId: 'next-js',
         name: 'Next JS'

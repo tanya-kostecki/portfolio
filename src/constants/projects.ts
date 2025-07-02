@@ -25,7 +25,7 @@ export const projects = [
         "A music streaming app built with Next.js, TypeScript, and Redux Toolkit. Users can sign up, log in, like tracks, and create a favorites track-list. The app features track filtering by author, year, and genre, as well as a search function to find tracks quickly.",
     image: project2,
     type: "personal",
-    deploy: "https://github.com/tanya-kostecki/skypro-music-app",
+    /*deploy: "https://github.com/tanya-kostecki/skypro-music-app",*/
     href: "https://github.com/tanya-kostecki/skypro-music-app",
     id: 2
   },
@@ -47,7 +47,7 @@ export const projects = [
         "A social network built with CRA with Typescript and Redux Toolkit. Users can login using a free account, follow and unfollow other users ",
     image: project4,
     type: "personal",
-    deploy: "https://github.com/tanya-kostecki/samurai-network",
+   /* deploy: "https://github.com/tanya-kostecki/samurai-network",*/
     href: "https://github.com/tanya-kostecki/samurai-network",
     id: 4
   },
@@ -69,7 +69,7 @@ export const projects = [
         "Admin for Inctagram",
     image: admin,
     type: "team",
-    deploy: "https://github.com/tanya-kostecki",
+    deploy: "https://admin.car-robot.ru/en",
     href: "https://github.com/Mechanics-cloud/admin-net",
     id: 6
   },
@@ -80,7 +80,7 @@ export const projects = [
         "An MVP of an online employee training platform developed for the Moscow Metro. The platform features secure authentication for both regular employees and methodologists. Regular users can browse available courses and take lessons, while methodologists have access to a course builder that allows them to create new courses and edit existing ones.",
     image: sdo,
     type: "team",
-    deploy: "https://edu.sdo-metro.ru/",
+    deploy: "https://edu.sdo-metro.ru",
     href: "https://github.com/aheadsps/sdo_mm",
     id: 7
   },

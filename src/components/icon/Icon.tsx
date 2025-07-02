@@ -8,10 +8,18 @@ type IconPropsType = {
     viewBox?: string;
     stroke?: string;
     fill?: string;
+    style?: React.CSSProperties;
 }
 export const Icon = (props: IconPropsType) => {
   return (
-    <svg width={props.width || '120px'} height={props.height || '115px'} viewBox={props.viewBox || '0 0 120 115'} fill={props.fill} stroke={props.stroke} xmlns="http://www.w3.org/2000/svg">
+    <svg
+        width={props.width || '120px'}
+        height={props.height || '115px'}
+        viewBox={props.viewBox || '0 0 120 115'}
+        fill={props.fill} stroke={props.stroke}
+        xmlns="http://www.w3.org/2000/svg"
+        style={props.style}
+    >
         <use xlinkHref={`${iconsSprite}#${props.iconId}`}/>
     </svg>
   )

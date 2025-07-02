@@ -3,16 +3,12 @@ import * as S from "./Projects.styled";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { projects } from "../../../constants/projects";
 import { Container } from "../../../components/Container";
-import { useGetWindowWidth } from "../../../hooks/useWindowWidth";
 import { ProjectsTabs } from "./projects-tabs/ProjectsTabs";
 import { AnimateBlock } from "./AnimateBlock";
 
 export const Projects: FC = () => {
-  const screen = useGetWindowWidth();
-
   const [currentFilterStatus, setCurrentFilterStatus] = useState<'all' | 'team' | 'personal'>("all");
   let filteredProjects = projects;
-  const mobileProjects = projects.slice(4);
 
   if (currentFilterStatus === "personal") {
     filteredProjects = projects.filter((project) => project.type === "personal");
@@ -27,11 +23,6 @@ export const Projects: FC = () => {
     setCurrentFilterStatus(value);
   };
 
-  const [showMore, setShowMore] = useState<boolean>(false);
-
-  const toggleMoreOnClick = () => {
-    setShowMore(!showMore);
-  };
   return (
     <S.Projects id="projects">
       <Container>
@@ -41,25 +32,7 @@ export const Projects: FC = () => {
           currentFilterStatus={currentFilterStatus}
         />
         <S.ProjectsGrid>
-          {screen.width > 768 ? (
-              <AnimateBlock projects={filteredProjects}/>
-          ) : currentFilterStatus === "all" && !showMore ? (
-              <>
-                <AnimateBlock projects={mobileProjects}/>
-                <S.ProjectsButton onClick={toggleMoreOnClick}>
-                  SHOW MORE
-                </S.ProjectsButton>
-              </>
-          ) : (
-              <>
-                <AnimateBlock projects={filteredProjects}/>
-                {currentFilterStatus === "all" ? (
-                    <S.ProjectsButton onClick={toggleMoreOnClick}>
-                      SHOW LESS
-                    </S.ProjectsButton>
-                ) : null}
-              </>
-          )}
+          <AnimateBlock projects={filteredProjects}/>
         </S.ProjectsGrid>
       </Container>
     </S.Projects>
